@@ -31,12 +31,13 @@ console.log(arrayPari(prova));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 function sommaArray(l) {
-  const risultao = l.forEach((l, i) => {
-    l + i;
+  const risultato = l.forEach((l) => {
+    risultato += l;
   });
-  return risultao;
+  return risultato;
 }
-console.log(prova);
+const prova1 = [10, 6, 7, 8, 5, 2, 50, 12, 9, 98];
+console.log(sommaArray(prova1));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -46,8 +47,11 @@ console.log(prova);
 */
 function backMap(n) {
   const risultato = n.map(n, (i) => n[i] + n);
+  return risultato;
 }
-console.log(prova);
+const prova2 = [10, 6, 7, 8, 5, 2, 50, 12, 9, 98];
+console.log(backMap(prova2));
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
