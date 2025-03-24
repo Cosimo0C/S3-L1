@@ -22,22 +22,20 @@ console.log(generatorArray());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 const prova = [10, 6, 7, 8, 5, 2, 50, 12, 9, 98];
-function arrayPari(test) {
-  const risultato = test.filter((test) => test % 2 == 0);
+function arrayPari(array) {
+  const risultato = array.filter((num) => num % 2 == 0);
   return risultato;
 }
 console.log(arrayPari(prova));
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-function sommaArray(l) {
-  const risultato = l.forEach((l) => {
-    risultato += l;
-  });
-  return risultato;
+function sommaArray(array) {
+  let risultato = 0;
+  array.forEach((num) => (risultato += num));
+  console.log(risultato);
 }
-const prova1 = [10, 6, 7, 8, 5, 2, 50, 12, 9, 98];
-console.log(sommaArray(prova1));
+console.log(sommaArray(prova));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -45,18 +43,16 @@ console.log(sommaArray(prova1));
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-function backMap(n) {
-  const risultato = n.map(n, (i) => n[i] + n);
+function backMap(array, n) {
+  const risultato = array.map((num) => num + n);
   return risultato;
 }
-const prova2 = [10, 6, 7, 8, 5, 2, 50, 12, 9, 98];
-console.log(backMap(prova2));
-
+console.log(backMap(prova, 2));
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-
+function stringhe(array) {}
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
