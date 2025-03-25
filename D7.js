@@ -39,7 +39,14 @@ console.log(sommaArray(prova));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-
+function aggiungere(array) {
+  const risultato = array.reduce((accu, valore) => {
+    console.log(accu);
+    console.log(valore);
+    return accu + valore;
+  }, 0);
+}
+console.log(aggiungere(prova));
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
@@ -52,7 +59,9 @@ console.log(backMap(prova, 2));
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-function stringhe(array) {}
+function stringhe(array) {
+  const risultato = array.map((stringa) => stringa.lenght);
+}
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
@@ -178,7 +187,11 @@ const movies = [
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-
+function sommaAnni(array) {
+  const risultato = array.reduce((acc, movie) => acc + parseInt(movie.Year), 0);
+  return risultato;
+}
+console.log(sommaAnni(movies));
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
